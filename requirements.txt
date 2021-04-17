@@ -1,2 +1,2 @@
-Python==3.8.3
-Tweepy==3.10.0
+Python==3.7
+Tweepy==3.6.0
