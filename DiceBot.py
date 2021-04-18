@@ -2,9 +2,16 @@ import tweepy
 import time
 import random
 
+#키랑 토큰 정의
+
+TWITTER_CONSUMER_KEY = ${{ secrets.TWITTER_CONSUMER_KEY }}
+TWITTER_CONSUMER_SECRET = ${{ secrets.TWITTER_CONSUMER_SECRET }}
+TWITTER_ACCESS_TOKEN_KEY = ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+TWITTER_ACCESS_TOKEN_SECRET = ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+
 #인증
-auth = tweepy.OAuthHandler(secrets.TWITTER_CONSUMER_KEY, secrets.TWITTER_CONSUMER_SECRET)
-auth.set_access_token(secrets.TWITTER_ACCESS_TOKEN_KEY, secrets.TWITTER_ACCESS_TOKEN_SECRET)
+auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
+auth.set_access_token(TWITTER_ACCESS_TOKEN_KEY, TWITTER_ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 #랜덤으로 목록 파일에서 출력 텍스트 뽑는 함수
