@@ -47,12 +47,12 @@ def reply_to_tweets():
         print(str(mention.id) + ' - ' + mention.full_text, flush=True)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
-        if '#케이크' in mention.full_text():
-            print('Found #케이크', flush=True)
+        if '#cake' in mention.full_text.lower():
+            print('Found #cake', flush=True)
             print('responding back', flush=True)
             api.update_status('@'+ mention.user.screen_name + randomCake, mention.id)
-        elif '#음악연습' in mention.full_text():
-            print('Found #음악연습', flush=True)
+        elif '#music' in mention.full_text.lower():
+            print('Found #music', flush=True)
             print('responding back', flush=True)
             api.update_status('@'+ mention.user.screen_name + randomMusic, mention.id)
 
