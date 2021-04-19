@@ -2,7 +2,7 @@ name: TG DICE
 
 on:
   schedule:
-  - cron: "* * * * *"
+  - cron: "*/5 * * * *"
   
 jobs:
   run:
